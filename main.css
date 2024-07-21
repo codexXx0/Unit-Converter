@@ -92,6 +92,7 @@ body {
 .container .bottom .section h4 {
     font-weight: normal;
     color: #353535;
+    padding-inline: 5px;
 }
 
 @media (max-width:600px) {
