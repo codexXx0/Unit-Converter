@@ -41,7 +41,7 @@ body {
 .container .top input {
     margin: 10px;
     height: 70px;
-    width: 80px;
+    /* width: 80px; */
     display: block;
     margin-inline: auto;
     border-radius: 5px;
@@ -118,7 +118,7 @@ body {
     }
     .container .top input {
         padding: 5px;
-        width: 60px;
+        /* width: 60px; */
         height: 50px;
         font-size: 35px;
     }
