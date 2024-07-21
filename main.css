@@ -1,0 +1,99 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt";
+    text-align: center;
+    background-image: url(wallpaperflare.com_wallpaper.jpg);
+    background-size:450%;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    margin-inline: auto;
+    top: 50%;
+    border: 9px rgb(255, 255, 255) solid;
+    border-radius: 8px;
+    box-shadow: 0 0 9px 0px #a1a1a1;
+    box-sizing: border-box;
+}
+.container .top {
+    background-color: #6943FF;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline: 30px;
+    box-sizing: border-box;
+}
+.container .top h1 {
+    margin: 0;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+.container .top input {
+    margin: 10px;
+    height: 70px;
+    width: 80px;
+    display: block;
+    margin-inline: auto;
+    border-radius: 5px;
+    background-color: #6943ff00;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    padding: 10px;
+}
+.container .top input[type=number]::-webkit-inner-spin-button, 
+.container .top input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.container .top input:focus {
+    outline: none;
+}
+.container .top button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.container .bottom {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.container .bottom .section {
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    padding: 10px 0 ;
+    margin-bottom: 15px;
+}
+.container .bottom .section:last-child {
+    margin-bottom: 0;
+}
+.container .bottom .section h3 {
+    color: #5A537B;
+}
+.container .bottom .section h4 {
+    font-weight: normal;
+    color: #353535;
+}
+
+@media (max-width:600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+}
