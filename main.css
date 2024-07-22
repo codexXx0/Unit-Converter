@@ -227,10 +227,10 @@ input:checked + .slider:before {
     }
     .switch .label {
         position: relative;
-        left: -60px;
-        bottom: 0px;
+        left: 0px;
+        bottom: 23px;
         color: var(--main) ;
-        font-size: 17px;
+        font-size: 15px;
     }
     
     .container .top input {
