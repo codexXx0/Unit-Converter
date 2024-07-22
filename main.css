@@ -15,6 +15,10 @@ body:has(#checkbox:checked) {
     --third: #273549 ; 
     --extra1: #CCC1FF;
     --extra2:white ;
+    background-image: url(imgs/dark-blue-pink-3840x2160-12661.jpg);
+    .container {
+        box-shadow: 0px 0px 20px 9px #6943ff91;
+    }
 }
 
 body {
@@ -23,7 +27,7 @@ body {
     font-style: normal;
     font-variation-settings:"slnt";
     text-align: center;
-    background-image: url(wallpaperflare.com_wallpaper.jpg);
+    background-image: url(imgs/wallpaperflare.com_wallpaper.jpg);
     background-size:450%;
     position: relative;
     padding: 0;
@@ -183,6 +187,14 @@ input:checked + .slider:before {
 }
 
 @media (max-width:600px) {
+    body:has(#checkbox:checked) {
+        background-color: var(--extra);
+        background-image: none;
+        .container {
+            box-shadow: none;
+        }
+    }
+    
     body {
         background-color: var(--extra);
         background-image: none;

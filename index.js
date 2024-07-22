@@ -22,7 +22,7 @@ function strict(el) {
 inputEl.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
     event.preventDefault();
-    document.getElementById("btn-el").click();
+    btnEl.click();
     }
 }
 )
