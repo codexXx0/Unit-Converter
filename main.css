@@ -1,3 +1,22 @@
+:root {
+    --main: white ;
+    --second: #6943FF ;
+    --third: #e4e4e4 ; 
+    --extra: white;
+    --extra1: #5A537B ;
+    --extra2: #353535 ;
+
+    --extra3: white ;
+}
+body:has(#checkbox:checked) {
+    --main : #1F2937 ;
+    --second: #6943FF ;
+    --extra: #1F2937 ;
+    --third: #273549 ; 
+    --extra1: #CCC1FF;
+    --extra2:white ;
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -13,19 +32,20 @@ body {
 
 .container {
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--extra);
     width: 600px;
     margin-inline: auto;
     margin-top: 50px;
     top: 50%;
-    border: 9px rgb(255, 255, 255) solid;
+    border: 9px var(--extra) solid;
     border-radius: 8px;
     box-shadow: 0 0 9px 0px #a1a1a1;
     box-sizing: border-box;
 }
 .container .top {
-    background-color: #6943FF;
-    color: white;
+    position: relative;
+    background-color: var(--second);
+    color: var(--extra3);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding-top: 20px;
@@ -38,21 +58,88 @@ body {
     padding: 15px;
     padding-bottom: 20px;
 }
+
+/* Toggle Swtich */
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    bottom: 10px;
+    right: 10px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #1F2937;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #1F2937;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34x);
+    transform: translateX(34px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.switch .label {
+    position: relative;
+    left: -65px;
+    bottom: -1px;
+    color: var(--main) ;
+    font-size: 20px;
+}
+
+
 .container .top input {
     margin: 10px;
     height: 70px;
-    /* width: 80px; */
     display: block;
     margin-inline: auto;
     border-radius: 5px;
     background-color: #6943ff00;
-    border: 1px solid white;
+    border: 1px solid var(--extra3);
     text-align: center;
-    color: white;
+    color: var(--extra);
     font-weight: bold;
     font-size: 45px;
     padding: 10px;
 }
+.container .top input::placeholder {
+    color: rgba(207, 207, 207, 0.685);
+}
+
 .container .top input[type=number]::-webkit-inner-spin-button, 
 .container .top input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -69,7 +156,7 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid var(--extra3);
     cursor: pointer;
 }
 
@@ -78,7 +165,7 @@ body {
     box-sizing: border-box;
 }
 .container .bottom .section {
-    background-color: #e4e4e4;
+    background-color: var(--third);
     border-radius: 5px;
     padding: 10px 0 ;
     margin-bottom: 15px;
@@ -87,27 +174,27 @@ body {
     margin-bottom: 0;
 }
 .container .bottom .section h3 {
-    color: #5A537B;
+    color: var(--extra1);
 }
 .container .bottom .section h4 {
     font-weight: normal;
-    color: #353535;
+    color: var(--extra2);
     padding-inline: 5px;
 }
 
 @media (max-width:600px) {
     body {
-        background-color: white;
+        background-color: var(--extra);
         background-image: none;
     }
     .container {
         width: 100%;
-        /* height: 100vh; */
         margin: 0;
         border-radius: 0;
         padding-top: 0px;
         padding-bottom: 0px;
         box-shadow: none;
+        border: var(--extra) 10px solid;
     }
     .container .top {
         padding: 10px 20px;
@@ -118,9 +205,14 @@ body {
     }
     .container .top input {
         padding: 5px;
-        /* width: 60px; */
         height: 50px;
         font-size: 35px;
+    }
+    .container .bottom .section h3 {
+        color: var(--extra1);
+    }
+    .container .bottom .section h4 {
+        color: var(--extra2);
     }
     .container .bottom .section h3 ,
     .container .bottom .section h4 {
