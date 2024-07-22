@@ -203,6 +203,36 @@ input:checked + .slider:before {
         padding: 5px;
         font-size: 30px;
     }
+    .switch {
+        width: 50px;
+        height: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 4px;
+        bottom: 3.55px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(28px);
+        -ms-transform: translateX(28px);
+        transform: translateX(28px);
+    }
+    .switch .label {
+        position: relative;
+        left: -60px;
+        bottom: 0px;
+        color: var(--main) ;
+        font-size: 17px;
+    }
+    
     .container .top input {
         padding: 5px;
         height: 50px;
