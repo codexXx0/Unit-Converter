@@ -8,19 +8,21 @@
 
     --extra3: white ;
 }
-body:has(#checkbox:checked) {
-    --main: white ;
-    --second: #6943FF ;
-    --third: #e4e4e4 ; 
+
+body.light-mode {
+    --main: white;
+    --second: #6943FF;
+    --third: #e4e4e4; 
     --extra: white;
-    --extra1: #5A537B ;
-    --extra2: #353535 ;
+    --extra1: #5A537B;
+    --extra2: #353535;
 
     background-image: url(imgs/wallpaperflare.com_wallpaper.jpg);
 
     .container {
         box-shadow: 0px 0px 20px 9px #6943ff91;
     }
+    
 }
 
 body {

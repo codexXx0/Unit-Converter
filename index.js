@@ -75,3 +75,28 @@ btnEl.addEventListener("click" , function() {
     }
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const checkbox = document.getElementById('checkbox');
+
+    // Load the saved mode from localStorage
+    if (localStorage.getItem('lightMode') === 'enabled') {
+        checkbox.checked = true;
+        document.body.classList.add('light-mode');
+    }
+
+    // Add an event listener to the checkbox
+    checkbox.addEventListener('change', () => {
+
+    if (checkbox.checked) {
+        document.body.classList.add('light-mode');
+        localStorage.setItem('lightMode', 'enabled');
+    } else {
+        document.body.classList.remove('light-mode');
+        localStorage.setItem('lightMode', 'disabled');
+    }
+
+    });
+
+
+});
